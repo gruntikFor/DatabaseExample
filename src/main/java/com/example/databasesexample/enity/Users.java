@@ -27,13 +27,11 @@ public class Users {
     String lastName;
     int age;
 
-    //if PrimaryKeyJoinColumn ids will be in both tables
-    //if JoinColumn id will be only in users table
-
-    @OneToOne
-//    @PrimaryKeyJoinColumn
-    @JoinColumn(name = "role_id")
-    Role role;
+    @ManyToMany
+    @JoinTable(name = "users_role",
+            joinColumns = {@JoinColumn(name = "user_id")},
+            inverseJoinColumns = {@JoinColumn(name = "role_id")})
+    Set<Role> roles = new HashSet<>();
 
     public Users(String firstName, String lastName, int age) {
         this.firstName = firstName;
