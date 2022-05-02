@@ -13,5 +13,8 @@
 
         <mapping class="com.example.databasesexample.enity.Users"/>
         <mapping class="com.example.databasesexample.enity.Role"/>
+        <mapping class="com.example.databasesexample.enity.Product"/>
+        <mapping class="com.example.databasesexample.enity.ProductCategory"/>
+        <mapping class="com.example.databasesexample.enity.Orders"/>
     </session-factory>
 </hibernate-configuration>
