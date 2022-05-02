@@ -10,6 +10,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 @Data
+@ToString(exclude = "products")
 @EqualsAndHashCode(callSuper = true)
 @NoArgsConstructor
 @AllArgsConstructor
