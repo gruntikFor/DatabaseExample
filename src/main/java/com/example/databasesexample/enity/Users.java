@@ -27,7 +27,11 @@ public class Users {
     String lastName;
     int age;
 
-    @ManyToOne
+    //if PrimaryKeyJoinColumn ids will be in both tables
+    //if JoinColumn id will be only in users table
+
+    @OneToOne
+//    @PrimaryKeyJoinColumn
     @JoinColumn(name = "role_id")
     Role role;
 

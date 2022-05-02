@@ -23,7 +23,7 @@ public class Role {
     Long id;
     String title;
 
-    @OneToMany(mappedBy = "role")
-    Set<Users> users;
+    @OneToOne(mappedBy = "role")
+    Users user;
 
 }
