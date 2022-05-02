@@ -16,6 +16,6 @@ public class Role {
     Long id;
     String title;
 
-    Set<Users> users;
+    Users user;
 
 }

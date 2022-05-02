@@ -8,11 +8,7 @@
             <generator class="native"/>
         </id>
         <property name="title" column="title" type="string"/>
-        <set name="users" table="users">
-            <key>
-                <column name="role_id" not-null="true"/>
-            </key>
-            <one-to-many class="com.example.databasesexample.enity.Users"/>
-        </set>
+
+        <one-to-one name="user" class="com.example.databasesexample.enity.Users"/>
     </class>
 </hibernate-mapping>
