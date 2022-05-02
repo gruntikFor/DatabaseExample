@@ -3,6 +3,7 @@ package com.example.databasesexample.enity;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
+import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -12,11 +13,17 @@ import java.util.Set;
 @NoArgsConstructor
 @ToString
 @FieldDefaults(level = AccessLevel.PRIVATE)
+@Entity
+@Table(name = "role")
 public class Role {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "id")
     Long id;
     String title;
 
-    Set<Users> users = new HashSet<>();
+    @OneToMany(mappedBy = "role")
+    Set<Users> users;
 
 }
