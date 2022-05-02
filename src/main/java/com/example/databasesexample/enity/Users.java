@@ -3,6 +3,9 @@ package com.example.databasesexample.enity;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
+import java.util.HashSet;
+import java.util.Set;
+
 @Getter
 @Setter
 @AllArgsConstructor
@@ -16,7 +19,7 @@ public class Users {
     String lastName;
     int age;
 
-    Role role;
+    Set<Role> roles = new HashSet<>();
 
     public Users(String firstName, String lastName, int age) {
         this.firstName = firstName;

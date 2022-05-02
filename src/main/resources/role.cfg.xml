@@ -9,6 +9,9 @@
         </id>
         <property name="title" column="title" type="string"/>
 
-        <one-to-one name="user" class="com.example.databasesexample.enity.Users"/>
+        <set name="users" table="users_role">
+            <key column="role_id"/>
+            <many-to-many column="users_id" class="com.example.databasesexample.enity.Users"/>
+        </set>
     </class>
 </hibernate-mapping>

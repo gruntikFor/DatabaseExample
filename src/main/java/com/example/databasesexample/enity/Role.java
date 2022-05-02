@@ -3,6 +3,7 @@ package com.example.databasesexample.enity;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
+import java.util.HashSet;
 import java.util.Set;
 
 @Getter
@@ -16,6 +17,6 @@ public class Role {
     Long id;
     String title;
 
-    Users user;
+    Set<Users> users = new HashSet<>();
 
 }

@@ -11,6 +11,10 @@
         <property name="lastName" column="last_name" type="string"/>
         <property name="age" column="age" type="int"/>
 
-        <one-to-one name="role" class="com.example.databasesexample.enity.Role"/>
+        <set name="roles" table="users_role">
+            <key column="users_id"/>
+            <many-to-many column="role_id" class="com.example.databasesexample.enity.Role"/>
+        </set>
+
     </class>
 </hibernate-mapping>
