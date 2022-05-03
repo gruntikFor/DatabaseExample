@@ -4,12 +4,8 @@ import com.example.databasesexample.enity.Product;
 import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.hibernate.criterion.Order;
-import org.hibernate.criterion.Projections;
 import org.hibernate.criterion.Restrictions;
 
-import java.math.BigDecimal;
-import java.util.Arrays;
 import java.util.List;
 
 public class CriteriaQuery {
