@@ -1,15 +1,13 @@
 package com.example.databasesexample;
 
 import com.example.databasesexample.enity.Product;
-import com.example.databasesexample.enity.Users;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.query.NativeQuery;
 
-import java.util.Iterator;
 import java.util.List;
 
-public class Main {
+public class SQLQuery {
 
     public static void main(String[] args) {
         SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
