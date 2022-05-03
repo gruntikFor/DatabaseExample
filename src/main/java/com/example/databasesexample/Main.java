@@ -18,6 +18,11 @@ public class Main {
         try {
             session.beginTransaction();
 
+            NativeQuery queryUpdate = session.createSQLQuery("update product set title = ? where id = ?");
+            queryUpdate.setParameter(1, "fff");
+            queryUpdate.setParameter(2, "1");
+            queryUpdate.executeUpdate();
+
             NativeQuery sqlQuery = session.createSQLQuery("select * from product p inner join product_category pc on pc.id = p.category_id ");
             sqlQuery.addEntity("p", Product.class);
             sqlQuery.addJoin("pc", "p.category");
